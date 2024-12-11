@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "699613856332",
+    "project_id": "avafinalcrud",
+    "storage_bucket": "avafinalcrud.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:699613856332:android:30f60ecdc6fc5d828deae9",
+        "android_client_info": {
+          "package_name": "br.edu.up.appaf32782039"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWiWHTtKktmK_fWTvj_NHt_ThfcGnvAI0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

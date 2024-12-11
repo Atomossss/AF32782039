@@ -1,6 +1,5 @@
 package br.edu.up.appaf32782039.Screens
 
-import android.media.Image
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -9,21 +8,21 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
+import br.edu.up.appaf32782039.Navigation.NotesNavigationItem
 import br.edu.up.appaf32782039.R
 import br.edu.up.appaf32782039.ui.theme.colorBlack
-
-
-
+import kotlinx.coroutines.delay
 
 
 @Composable
-@Preview
-fun SplashScreen(modifier: Modifier = Modifier) {
+fun SplashScreen(navHostController: NavHostController) {
     Scaffold { innerPadding ->
         Box(
             modifier = Modifier
@@ -38,4 +37,14 @@ fun SplashScreen(modifier: Modifier = Modifier) {
             )
         }
     }
+    LaunchedEffect(Unit) {
+        delay (2500)
+        navHostController.navigate(NotesNavigationItem.HomeScreen.route){
+            popUpTo(NotesNavigationItem.SplashScreen.route){
+                inclusive = true
+            }
+        }
+
+    }
+
 }
